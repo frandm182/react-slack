@@ -5,7 +5,7 @@ import 'firebase/storage';
 
 
 var config = {
-  apiKey: "",
+  apiKey: "AIzaSyDdybzJgg33OorXiz9gz1TX2xnvh3pUQyI",
   authDomain: "react-slack-frandeveloper.firebaseapp.com",
   databaseURL: "https://react-slack-frandeveloper.firebaseio.com",
   projectId: "react-slack-frandeveloper",
