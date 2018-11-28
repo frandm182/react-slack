@@ -4,13 +4,18 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import './index.css';
 import App from './components/App';
+import Login from './components/auth/Login';
+import Register from './components/auth/Register';
+
 import registerServiceWorker from './registerServiceWorker';
 
 
 const Root = () => (
   <Router>
     <Switch>
-      <Route path='/' component={App} />
+      <Route exact path='/' component={App} />
+      <Route path='/login' component={Login} />
+      <Route path='/register' component={Register} />
     </Switch>
   </Router>
 )
