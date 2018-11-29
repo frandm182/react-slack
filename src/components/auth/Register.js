@@ -13,7 +13,7 @@ class Register extends React.Component {
     passwordConfirmation: '',
     errors: [],
     loading: false,
-    userRef: firebase.database().ref('users')
+    usersRef: firebase.database().ref('users')
   };
 
   isFormValid = () => {
@@ -89,8 +89,8 @@ class Register extends React.Component {
   }
 
   saveUser = createdUser => {
-    return this.state.userRef.child(createdUser.user.uid).set({
-      name: createdUser.displayName,
+    return this.state.usersRef.child(createdUser.user.uid).set({
+      name: createdUser.user.displayName,
       avatar: createdUser.user.photoURL
     });
   }
@@ -104,7 +104,7 @@ class Register extends React.Component {
     return (
       <Grid textAlign='center' verticalAlign='middle'>
         <Grid.Column style={{ maxWidth: 450 }}>
-          <Header as='h2' icon color='orange' textAlign='center'>
+          <Header as='h1' icon color='orange' textAlign='center'>
             <Icon name='puzzle piece' color='orange' />
             Register Slack
           </Header>
